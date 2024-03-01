@@ -1,0 +1,105 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+{% block subanner %}
+
+			<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+
+				<div class="overlay"></div>
+
+				<div class="container">
+
+
+					<h1 class="entry-title">{% trans "Personnalisez votre Rendez-vous" %}</h1>
+					<p>Envoyez-nous plus de détails concernant votre inquiétude. </p>
+				</div>
+
+			</section>
+
+{% endblock subanner %}
+
+
+{% block content %}
+
+<!-- Sub Page Content
+			============================================= -->
+			<div id="sub-page-content" class="clearfix no-padding">
+
+				<!-- Appointment
+				============================================= -->
+				<section class="appointment-sec text-center">
+					
+					<div class="container">
+						
+						<h1>{% trans "Make an appointment" %}</h1>
+
+						<form class="form" method="POST" enctype="multipart/form-data">
+											{% csrf_token %}
+
+										<div class="form-row">
+
+											<div class="form-group col-md-6 mb-0">
+											{{ form.first_name|as_crispy_field }}
+										  	</div>
+
+											<div class="form-group col-md-6 mb-0">
+											{{ form.last_name|as_crispy_field }}
+										  	</div>
+
+											<div class="form-group col-md-6 mb-0">
+											{{ form.email|as_crispy_field }}
+										  	</div>
+
+											<div class="form-group col-md-6 mb-0">
+											{{ form.phone_number|as_crispy_field }}
+										  	</div>
+
+											<div class="form-group col-md-6 mb-0">
+											{{ form.date_of_appointment|as_crispy_field }}
+										  	</div>
+
+
+											<div class="form-group col-md-6 mb-0">
+											{{ form.gender|as_crispy_field }}
+										  	</div>
+
+											<div class="form-group col-md-10 mb-0">
+											{{ form.image_appointment|as_crispy_field }}
+										  	</div>
+
+
+											<div class="form-group col-md-10 mb-0">
+											{{ form.message|as_crispy_field }}
+										  	</div>
+
+										</div>
+
+										<div class="form-group col-md-10 mb-0">
+
+										<input class="btn btn-default btn-rounded" type="submit" value="{% trans 'Submit' %}" />
+
+										</div>
+
+						</form>
+
+								<div class="appointment-form clearfix">
+								   <div class="success" id="message-app" style="display:none;"></div>
+
+								</div>
+							</div>
+
+
+				</section>
+    
+    
+				
+
+    
+    		</div>
+    
+		<div class="colourfull-row"></div>
+	
+{% endblock content %}

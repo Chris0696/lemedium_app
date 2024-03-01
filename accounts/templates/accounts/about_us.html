@@ -1,0 +1,442 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+<!-- Sub Page Banner
+============================================= -->
+
+{% block subanner %}
+
+			<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+
+				<div class="overlay"></div>
+
+				<div class="container">
+					<h1 class="entry-title">about us</h1>
+					<p>Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+				</div>
+
+			</section>
+
+
+{% endblock subanner %}
+
+
+{% block content %}
+
+
+<!-- Sub Page Content
+			============================================= -->
+			<div id="sub-page-content">
+
+
+				<div class="container big-font">
+					<h2 class="light bordered main-title">who <span>we are</span></h2>
+					<div class="media pull-right"><a href="http://vimeo.com/36031564" class="fancybox-media"><img src="{% static 'images/video-icon.png' %}" class="img-rounded" alt="" title=""></a></div>
+					<p>{% trans "La clinique médicale LE MEDIUM est située à Parakou, dans le 1er arrondissement, au quartier Thiangourou dans la rue longeant la fin de la clôture de l’autogare Albarika à environ 100 mètres à droite après la place IDI." %}</p>
+					<p>{% trans "Nous sommes une clinique médicale de grande envergure, très attrayante et très dynamique. Nos projets pour être au chevet des populations concernant leurs soucis de santé sont énormes." %}</p>
+					<a href="#." class="btn btn-default btn-rounded">{% trans "Nous contacter" %}</a>
+				</div>
+
+
+				<div class="height20"></div>
+
+
+				<!-- Meet the Doctor
+				============================================= -->
+				<section class="meet-the-doctors text-center">
+
+					<div class="container">
+
+						<h1 class="light">{% trans "meet the <span>perfect specialists</span> team" %}</h1>
+						<p class="lead">{% trans "Nous disposons d'une équipe solide de personnels qualifiés rompus à la tâche." %}</p>
+
+						<div class="team-member-description one">
+							<div class="team-member-desc-inner team-desc">
+								<h5>Dr Juste S. DANHOUEGNON<span>{% trans "Médecin-Chef" %}</span></h5>
+								<p>{% trans "Promoteur de la clinique dans son bureau..." %}<a href="member-detail.html">{% trans "Profil"%}</a></p>
+								<ul class="list-unstyled social2 white">
+									<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								<span class="pointing-arrow"></span>
+							</div>
+							<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
+						</div>
+
+						<div class="team-member-description two">
+							<div class="team-member-desc-inner team-desc">
+								<h5>{% trans "Mme OROU SOUA Wassila" %}<span>{% trans "Sage-femme" %}</span></h5>
+								<p>{% trans "Une des sages-femmes dans la salle de consultation prénatale ..." %}<a href="member-detail.html">{% trans "Profil"%}</a></p>
+								<ul class="list-unstyled social2 white">
+									<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								<span class="pointing-arrow"></span>
+							</div>
+							<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
+						</div>
+
+						<div class="team-member-description three">
+							<div class="team-member-desc-inner team-desc">
+								<h5>{% trans "Mr Evode MANEDJI" %}<span>{% trans "Technicien de laboratoire" %}</span></h5>
+								<p>{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised..."}<a href="member-detail.html">Read more</a></p>
+								<ul class="list-unstyled social2 white">
+									<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								<span class="pointing-arrow"></span>
+							</div>
+							<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
+						</div>
+
+						<div class="team-member-description four">
+							<div class="team-member-desc-inner team-desc">
+								<h5>Dr.Kylee Leewan<span>{% trans "Physical Therapist" %}</span></h5>
+								<p>{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised..." %}<a href="member-detail.html">Read more</a></p>
+								<ul class="list-unstyled social2 white">
+									<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								<span class="pointing-arrow"></span>
+							</div>
+							<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
+						</div>
+
+						<div class="team-member-description five">
+							<div class="team-member-desc-inner team-desc">
+								<h5>Dr.Kylee Leewan<span>{% trans "Physical Therapist" %}</span></h5>
+								<p>{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised..." %}<a href="member-detail.html">Read more</a></p>
+								<ul class="list-unstyled social2 white">
+									<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								<span class="pointing-arrow"></span>
+							</div>
+							<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
+						</div>
+
+						<div id="team-carousel" class="owl-carousel two">
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img1.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img2.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img3.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img1.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img2.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img3.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img1.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+							<div class="team-member">
+								<div class="team-thumb">
+									<img src="images/team-member-img2.jpg" class="img-rounded" alt="">
+									<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+									<a href="#."><i class="fa fa-twitter"></i></a>
+									<a href="#."><i class="fa fa-google-plus"></i></a></div>
+								</div>
+								<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+								<a href="member-detail.html"><em>- View Profile</em></a>
+							</div>
+
+						 </div>
+
+					</div>
+				</section>
+
+
+
+				<!-- Features
+				============================================= -->
+				<section class="features">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="feature">
+									<i class="pull-left feature-icon fa fa-user-md"></i>
+									<div class="feature-content">
+										<h5><a href="#.">{% trans "Creative doctors" %}</a></h5>
+										<p>{% trans "Nous avons en service des personnels unis et pontuels à la tâche. Votre santé est l'une des préocupations importante pour nous" %}</p>
+										<a href="#."><dfn>- {% trans "Learn more" %}</dfn></a>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="feature">
+									<i class="pull-left feature-icon fa fa-clock-o"></i>
+									<div class="feature-content">
+										<h5><a href="#.">24/7 {% trans "Live Support" %}</a></h5>
+										<p>{% trans "Depuis chez vous, prenez rdv pour une consultation en ligne avec notre support qui est disponible et répond à tout moment" %}</p>
+										<a href="#."><dfn>- {% trans "Learn more" %}</dfn></a>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+
+								<div class="feature">
+									<i class="pull-left feature-icon fa fa-tint"></i>
+									<div class="feature-content">
+										<h5><a href="#.">{% trans "Un centre de centé équipé" %}</a></h5>
+										<p>{% trans "Nous disposons des meilleurs outils de soins et d'analyses. Nous veillons à la qualité de nos équipements." %}</p>
+										<a href="#."><dfn>- {% trans "Learn more" %}</dfn></a>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="feature">
+									<i class="pull-left feature-icon fa fa-phone-square"></i>
+									<div class="feature-content">
+										<h5><a href="#.">{% trans "emergency services" %}</a></h5>
+										<p>{% trans "En cas d'urgence, nous sommes joignable que ce soit par alerte sur notre site ou par appel." %}</p>
+										<a href="#."><dfn>- {% trans "Learn more" %}</dfn></a>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+
+
+
+				<!-- Our Hospitals and Why Choose Medicom
+				============================================= -->
+				<div class="container padding-top-35 clearfix">
+
+					<div class="row">
+
+						<div class="col-md-6">
+
+							<h2 class="light bordered">{% trans "our <span>hospital</span>" %}</h2>
+
+							<div class="slider-mini no-margin-bottom">
+
+								<div id="our-hospital" class="owl-carousel text-center">
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img.jpg' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img1.jpg' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img2.png' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img3.jpg' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img4.png' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img5.png' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img6.png' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img7.png' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img8.jpg' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img9.png' %}" alt="" title="">
+									</div>
+
+									<div class="item">
+									  <img src="{% static 'images/hospital-img10.png' %}" alt="" title="">
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col-md-6">
+
+							<h2 class="light bordered">{% trans "why <span>choose medicom</span>" %}</h2>
+
+							<div class="panel-group accordian-style2" id="accordion2">
+
+							  <div class="panel panel-default">
+
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+									  <i class="fa fa-medkit"></i>{% trans "our responsibility" %}<i class="fa fa-angle-down pull-right"></i>
+									</a>
+								  </h4>
+								</div>
+
+								<div id="collapseOne" class="panel-collapse collapse in">
+								  <div class="panel-body">
+									  {% trans "Assurer le bien être des citoyens" %}
+								  </div>
+								</div>
+							  </div>
+
+							  <div class="panel panel-default">
+
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+									  <i class="fa fa-heart"></i>{% trans "heart specialist" %}<i class="fa fa-angle-down pull-right"></i>
+									</a>
+								  </h4>
+								</div>
+
+								<div id="collapseTwo" class="panel-collapse collapse">
+								  <div class="panel-body">
+									  {% trans "Nous rassurons d'une fiabilité et d'une expertise venant de nos spécialistes" %}
+								  </div>
+								</div>
+
+							  </div>
+
+							  <div class="panel panel-default">
+
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+									  <i class="fa fa-eye"></i>{% trans "eye specialist" %}<i class="fa fa-angle-down pull-right"></i>
+									</a>
+								  </h4>
+								</div>
+
+								<div id="collapseThree" class="panel-collapse collapse">
+								  <div class="panel-body">
+									  {% trans "Une ophtamologie de pointe" %}
+								  </div>
+								</div>
+
+							  </div>
+
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+		</div><!--end sub-page-content-->
+
+
+{% endblock content %}

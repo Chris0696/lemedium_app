@@ -1,0 +1,148 @@
+{% load static %}
+{% load i18n %}
+<!-- Footer
+============================================= -->
+<footer id="footer" class="light">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-3">
+
+				<!-- Footer Widget
+				============================================= -->
+				<div class="footer-widget">
+
+					<h4><span>Le Medium</span></h4>
+
+					<ul class="footer-nav list-unstyled clearfix">
+						<li><a href="{% url 'accounts:index' %}"><i class="fa fa-long-arrow-right"></i>{% trans "Home" %}</a></li>
+						<li><a href="{% url 'doctor-account' %}"><i class="fa fa-long-arrow-right"></i>{% trans "Doctors" %}</a></li>
+						<li><a href="{% url 'accounts:about' %}"><i class="fa fa-long-arrow-right"></i>{% trans "About US" %}</a></li>
+						<li><a href="{% url 'accounts:service' %}"><i class="fa fa-long-arrow-right"></i>{% trans "Departments" %}</a></li>
+						<li><a href="{% url 'accounts:service' %}"><i class="fa fa-long-arrow-right"></i>{% trans "Services" %}</a></li>
+
+
+						<li><a href="#."><i class="fa fa-long-arrow-right"></i>{% trans "Medical Care" %}</a></li>
+						<li><a href="#."><i class="fa fa-long-arrow-right"></i>{% trans "Specilaties" %}</a></li>
+
+						<li><a href="{% url 'accounts:contact' %}"><i class="fa fa-long-arrow-right"></i>{% trans "Contact Us" %}</a></li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="col-md-3">
+
+				<!-- Footer Widget
+				============================================= -->
+				<div class="footer-widget">
+
+					<h4><span>newsletter</span></h4>
+
+					<div class="newsletter clearfix">
+
+						<i class="fa fa-envelope"></i>
+						<p class="newsletter-text">{% trans "Sign up with your name and email to get updates fresh updates." %}</p>
+
+					<div class="success" id="message-news" style="display:none;">{% trans "Thank you! You have successfully subscribed." %}</div>
+					<form name="newsletter_form" id="newsletter_form" method="post" action="submit.php" onSubmit="return false">
+						<input type="text" name="news_name" id="news_name" placeholder="Your Name" onKeyPress="removeChecks();">
+						<input type="email" name="news_email_address" id="news_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
+						<input type="submit" value="subscribe" class="btn btn-default btn-rounded" onClick="validateNewsletter();">
+					</form>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-3">
+
+				<!-- Footer Widget
+				============================================= -->
+				<div class="footer-widget">
+
+					<h4><span>{% trans "Récentes pubs" %}</span></h4>
+
+					<div class="twitter-widget">
+
+						<div class="tweet">
+							<i class="fa fa-twitter"></i>
+							<p><a href="#">@Rotography</a> {% trans "Please kindly use our Support Forum" %}: <a href="#.">pixelatic.co.uk.</a>
+							<span>{% trans "about a month ago" %}</span>
+							</p>
+						</div>
+
+						<div class="tweet">
+							<i class="fa fa-twitter"></i>
+							<p><a href="#">@Rotography</a> {% trans "Please kindly use our Support Forum" %}: <a href="#.">pixelatic.co.uk.</a>
+							<span>{% trans "about a month ago" %}</span>
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-md-3">
+
+				<!-- Footer Widget
+				============================================= -->
+				<div class="footer-widget">
+
+					<h4><span>{% trans "Contact" %}</span></h4>
+					<p>{% trans "Prenez connaissance de notre localisation et nos contacts" %}</p>
+
+					<div class="contact-widget">
+						<i class="fa fa-home"></i><p>{% trans "Thiangourou, Rue longeant la clôture de l'autogare centrale Albarika, 200m à droite après la place IDI" %}</p>
+						<i class="fa fa-globe"></i><p><a href="{% url 'accounts:index' %}">www.centremedical-lemedium.com</a></p>
+						<i class="fa fa-mobile"></i><p class="phone-number">(+229) 42 937 764</p>
+						<i class="fa fa-mobile"></i><p class="phone-number">(+229) 96 831 460</p>
+						<i class="fa fa-mobile"></i><p class="phone-number">(+229) 40 509 801</p>
+					</div>
+
+					<ul class="social3 clearfix">
+						<li><a href="#."><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#."><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#."><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#."><i class="fa fa-skype"></i></a></li>
+						<li><a href="#."><i class="fa fa-youtube"></i></a></li>
+						<li><a href="#."><i class="fa fa-dribbble"></i></a></li>
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Copyright
+	============================================= -->
+	<p class="copyright text-center">{% trans "Copyright &copy; 2024 Clinique Médicale le Médium. Tous droits réservés." %}</p>
+
+
+	<!-- Footer Bottom
+	============================================= -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"><a href="#."><img src="{% static 'images/logo_le_medium.png' %}" alt="" title="Medicom Logo"></a></div>
+			<div class="col-md-10">
+				<p class="footer-bottom-text">{% trans "Texte de pieds de page" %}</p>
+			</div>
+		</div>
+	</div>
+
+
+</footer>
+
+
+
+
+
+

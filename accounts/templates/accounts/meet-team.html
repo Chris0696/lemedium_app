@@ -1,0 +1,70 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+			
+			
+			
+			<!-- Sub Page Banner
+			============================================= -->
+			<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+				
+				<div class="overlay"></div>
+				
+				<div class="container">
+					<h1 class="entry-title">meet team</h1>
+					<p>Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+				</div>
+				
+			</section>
+    
+    
+			
+			<!-- Sub Page Content
+			============================================= -->
+			<div id="sub-page-content" class="clearfix">
+			
+			
+				<div class="container">
+					
+					<h2 class="light bordered main-title">meet <span>specialist</span></h2>
+					
+					<div class="row">
+						{% for profile in profiles %}
+						<div class="col-md-6 padding-bottom-60 clearfix">
+							
+							<div class="doctors-img"><img src="{{ profile.profile_image.url }}" width="234" alt="" title="">
+								<ul class="list-unstyled social2">
+									<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+
+								</ul>
+							</div>
+							
+							<div class="doctors-detail">
+								<h4>{{ profile.name }}<span>{{ profile.short_intro }}</span></h4>
+							 	<p><label class="heading">Speciality</label><label class="detail">{{ profile.speciality }}</label></p>
+								<p><label class="heading">Degrees</label><label class="detail">{{ profile.speciality }}</label></p>
+								<p><label class="heading">Experience</label><label class="detail">{{ profile.experience }}</label></p>
+								<p><label class="heading">Training</label><label class="detail">{{ profile.training }}</label></p>
+								<p><label class="heading">Work days</label><label class="detail">{{ profile.work_days }}</label></p>
+								<button style="margin-top: 10px" type="button" class="btn btn-primary">SEND MESSAGE</button>
+								</div>
+							
+						</div>
+						{% endfor %}
+						
+					</div>
+
+				</div>
+
+	
+		</div><!--end sub-page-content-->
+    
+    
+    
+		<div class="colourfull-row"></div>
+	
+	
+{% endblock content %}

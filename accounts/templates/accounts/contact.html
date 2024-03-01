@@ -1,0 +1,124 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block subanner %}
+
+			
+			<!-- Sub Page Banner
+			============================================= -->
+			<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+				
+				<div class="overlay"></div>
+				
+				<div class="container">
+					<h1 class="entry-title">Contact Us</h1>
+					<p>Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+				</div>
+				
+			</section>
+    
+{% endblock subanner %}
+
+
+{% block content %}
+			<!-- Sub Page Content
+			============================================= -->
+			<div id="sub-page-content" class="clearfix">
+				
+				<div class="container">
+					
+					<h2 class="light bordered">{% trans "Get<span>Directions</span>" %}</h2>
+					
+					<div class="row">
+						
+						<div class="col-md-12">
+							
+							<!-- Map
+							============================================= -->
+							<script src="https://maps.googleapis.com/maps/api/js?v=3key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+							<script src="{% static 'js/map.js' %}"></script>
+							<div class="map" id="map"></div>
+							
+							<div class="get-directions">
+								<form action="http://maps.google.com/maps" method="get" target="_blank">
+								   <input type="text" name="saddr" placeholder="{% trans 'Enter Your Address' %}" />
+								   <input type="hidden" name="daddr" value="Envato Pty Ltd, Elizabeth Street, Melbourne, Victoria, Australia" />
+								   <input type="submit" value="Get directions" class="direction-btn" />
+								</form>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						
+						<div class="col-md-8">
+							
+							<h2 class="light bordered">{% trans "Give us a <span>Message</span>" %}</h2>
+							
+							
+							<!-- Contact Form
+							============================================= -->
+							<div class="contact-form clearfix">
+								<div id="message-contact" class="success" style="display:none;">{% trans "Thank you! we'll contact you shortly." %}</div>
+								<form name="contact_form" id="contact_form" action="submit.php" method="post" onSubmit="return false;">
+									<input type="text" name="fname" id="fname" placeholder="First Name" onKeyPress="removeChecks();">
+									<input type="text" name="email_address" id="email_address" placeholder="Email Address" onKeyPress="removeChecks();">
+									<input type="text" name="subject" id="subject" placeholder="{% trans 'Subject' %}">
+									<textarea placeholder="Message" name="msg" id="msg"></textarea>
+									<input type="submit" class="btn btn-default" value="{% trans 'Submit' %}" onClick="validateContact();">
+								</form>
+							</div>
+							
+						</div>
+						
+						<div class="col-md-4">
+							
+							<h2 class="light bordered">{% trans "get in <span>touch</span>" %}</h2>
+							
+							
+							<!-- Get in Touch Widget
+							============================================= -->
+							<div class="get-in-touch-widget">
+								
+								<ul class="list-unstyled">
+									<li><i class="fa fa-phone"></i>(+229) 40 509 801</li>
+									<li><i class="fa fa-envelope"></i><a href="#.">contact@centremedical-lemedium.com</a></li>
+									<li><i class="fa fa-globe"></i><a href="#.">www.centremedical-lemedium.com</a></li>
+
+									<li><i class="fa fa-clock-o"></i>H24/24</li>
+									<li><i class="fa fa-map-marker"></i>{% trans "Thiangourou, Rue longeant la clôture de l'autogare centrale Albarika, 200m à droite après la place IDI" %}</li>
+								</ul>
+								
+							</div>
+							
+							
+							<!-- Social
+							============================================= -->
+							<ul class="social-rounded">
+								<li><a href="#."><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#."><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#."><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#."><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#."><i class="fa fa-youtube"></i></a></li>
+								<li><a href="#."><i class="fa fa-vimeo-square"></i></a></li>
+								<li><a href="#."><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#."><i class="fa fa-rss"></i></a></li>
+								<li><a href="#."><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#."><i class="fa fa-android"></i></a></li>
+								<li><a href="#."><i class="fa fa-flickr"></i></a></li>
+							</ul>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			
+			
+			
+			</div><!--end sub-page-content-->
+{% endblock content %}

@@ -1,0 +1,1017 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-26 11:19+0100\n"
+"PO-Revision-Date: 2024-02-26 11:11+0000\n"
+"Last-Translator:   <oswaldjchris@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\accounts\models.py:48
+msgid "name"
+msgstr "Name"
+
+#: .\accounts\models.py:50
+msgid "Username"
+msgstr "Username"
+
+#: .\accounts\models.py:51
+msgid "date_of_birth"
+msgstr "Date of birth"
+
+#: .\accounts\models.py:53
+msgid "profile_image"
+msgstr "Profile image"
+
+#: .\accounts\models.py:55
+#: .\accounts\templates\accounts\patients_profiles.html:48
+msgid "adress"
+msgstr "adress"
+
+#: .\accounts\templates\accounts\about_us.html:37
+msgid ""
+"La clinique médicale LE MEDIUM est située à Parakou, dans le 1er "
+"arrondissement, au quartier Thiangourou dans la rue longeant la fin de la "
+"clôture de l’autogare Albarika à environ 100 mètres à droite après la place "
+"IDI."
+msgstr ""
+"The LE MEDIUM medical clinic is located in Parakou, in the 1st "
+"arrondissement, in the Thiangourou district in the street running along the "
+"end of the Albarika bus station fence about 100 meters on the right after "
+"IDI square."
+
+#: .\accounts\templates\accounts\about_us.html:38
+msgid ""
+"Nous sommes une clinique médicale de grande envergure, très attrayante et "
+"très dynamique. Nos projets pour être au chevet des populations concernant "
+"leurs soucis de santé sont énormes."
+msgstr ""
+"We are a large, very attractive and very dynamic medical clinic. Our plans "
+"to be at the bedside of populations regarding their health concerns are "
+"enormous."
+
+#: .\accounts\templates\accounts\about_us.html:39
+msgid "Nous contacter"
+msgstr "Contact Us"
+
+#: .\accounts\templates\accounts\about_us.html:52
+msgid "meet the <span>perfect specialists</span> team"
+msgstr "<span>Qualified</span> Care "
+
+#: .\accounts\templates\accounts\about_us.html:53
+msgid ""
+"Nous disposons d'une équipe solide de personnels qualifiés rompus à la tâche."
+msgstr "We have a solid team of qualified personnel experienced in the task."
+
+#: .\accounts\templates\accounts\about_us.html:57
+msgid "Médecin-Chef"
+msgstr "Chief doctor"
+
+#: .\accounts\templates\accounts\about_us.html:58
+msgid "Promoteur de la clinique dans son bureau..."
+msgstr "Promoter of the clinic in his office..."
+
+#: .\accounts\templates\accounts\about_us.html:58
+#: .\accounts\templates\accounts\about_us.html:72
+msgid "Profil"
+msgstr "Profile"
+
+#: .\accounts\templates\accounts\about_us.html:71
+msgid "Mme OROU SOUA Wassila"
+msgstr "Mme OROU SOUA Wassila"
+
+#: .\accounts\templates\accounts\about_us.html:71
+msgid "Sage-femme"
+msgstr "Midwife"
+
+#: .\accounts\templates\accounts\about_us.html:72
+msgid "Une des sages-femmes dans la salle de consultation prénatale ..."
+msgstr "One of the midwives in the prenatal consultation room"
+
+#: .\accounts\templates\accounts\about_us.html:85
+msgid "Mr Evode MANEDJI"
+msgstr "Mr Evode MANEDJI"
+
+#: .\accounts\templates\accounts\about_us.html:85
+msgid "Technicien de laboratoire"
+msgstr "Laboratory technician"
+
+#: .\accounts\templates\accounts\about_us.html:99
+#: .\accounts\templates\accounts\about_us.html:113
+msgid "Physical Therapist"
+msgstr "Physical Therapist"
+
+#: .\accounts\templates\accounts\about_us.html:100
+#: .\accounts\templates\accounts\about_us.html:114
+msgid ""
+"It has survived not only five centuries, but also the leap into electronic "
+"typesetting, remaining popularised..."
+msgstr ""
+"It has survived not only five centuries, but also the leap into electronic "
+"typesetting, remaining essentially unchanged. It was popularised in the "
+"1960s with the release of Letraset sheets containing Lorem Aldus Page Maker "
+"including versions."
+
+#: .\accounts\templates\accounts\about_us.html:244
+msgid "Creative doctors"
+msgstr "Creative doctors"
+
+#: .\accounts\templates\accounts\about_us.html:245
+msgid ""
+"Nous avons en service des personnels unis et pontuels à la tâche. Votre "
+"santé est l'une des préocupations importante pour nous"
+msgstr ""
+"We have united and dedicated staff on duty. Your health is one of the "
+"important concerns for us"
+
+#: .\accounts\templates\accounts\about_us.html:246
+#: .\accounts\templates\accounts\about_us.html:259
+#: .\accounts\templates\accounts\about_us.html:275
+#: .\accounts\templates\accounts\about_us.html:288
+msgid "Learn more"
+msgstr "Learn more"
+
+#: .\accounts\templates\accounts\about_us.html:257
+msgid "Live Support"
+msgstr "Live Support"
+
+#: .\accounts\templates\accounts\about_us.html:258
+msgid ""
+"Depuis chez vous, prenez rdv pour une consultation en ligne avec notre "
+"support qui est disponible et répond à tout moment"
+msgstr ""
+"From home, make an appointment for an online consultation with our support "
+"who is available and responds at any time"
+
+#: .\accounts\templates\accounts\about_us.html:273
+msgid "Un centre de centé équipé"
+msgstr "An equipped health center"
+
+#: .\accounts\templates\accounts\about_us.html:274
+msgid ""
+"Nous disposons des meilleurs outils de soins et d'analyses. Nous veillons à "
+"la qualité de nos équipements."
+msgstr ""
+"We have the best care and analysis tools. We ensure the quality of our "
+"equipment."
+
+#: .\accounts\templates\accounts\about_us.html:286
+msgid "emergency services"
+msgstr "emergency services"
+
+#: .\accounts\templates\accounts\about_us.html:287
+msgid ""
+"En cas d'urgence, nous sommes joignable que ce soit par alerte sur notre "
+"site ou par appel."
+msgstr ""
+"In the event of an emergency, we can be reached either by alert on our site "
+"or by call."
+
+#: .\accounts\templates\accounts\about_us.html:311
+msgid "our <span>hospital</span>"
+msgstr "our <span>hospital</span>"
+
+#: .\accounts\templates\accounts\about_us.html:369
+msgid "why <span>choose medicom</span>"
+msgstr "why <span>choose medicom</span>"
+
+#: .\accounts\templates\accounts\about_us.html:378
+msgid "our responsibility"
+msgstr "our responsibility"
+
+#: .\accounts\templates\accounts\about_us.html:385
+msgid "Assurer le bien être des citoyens"
+msgstr "Ensuring the well-being of citizens"
+
+#: .\accounts\templates\accounts\about_us.html:395
+msgid "heart specialist"
+msgstr "heart specialist"
+
+#: .\accounts\templates\accounts\about_us.html:402
+msgid ""
+"Nous rassurons d'une fiabilité et d'une expertise venant de nos spécialistes"
+msgstr ""
+"We reassure you of the reliability and expertise coming from our specialists"
+
+#: .\accounts\templates\accounts\about_us.html:413
+msgid "eye specialist"
+msgstr "eye specialist"
+
+#: .\accounts\templates\accounts\about_us.html:420
+msgid "Une ophtamologie de pointe"
+msgstr "Cutting-edge ophthalmology"
+
+#: .\accounts\templates\accounts\contact.html:32
+msgid "Get<span>Directions</span>"
+msgstr "Get<span>Directions</span>"
+
+#: .\accounts\templates\accounts\contact.html:46
+msgid "Enter Your Address"
+msgstr "Enter Your Address"
+
+#: .\accounts\templates\accounts\contact.html:60
+msgid "Give us a <span>Message</span>"
+msgstr "Give us a <span>Message</span>"
+
+#: .\accounts\templates\accounts\contact.html:66
+#: .\accounts\templates\accounts\login_form.html:34
+msgid "Thank you! we'll contact you shortly."
+msgstr "Thank you! we'll contact you shortly."
+
+#: .\accounts\templates\accounts\contact.html:70
+msgid "Subject"
+msgstr "Subject"
+
+#: .\accounts\templates\accounts\contact.html:72
+#: .\appointment\templates\appointment\appointment_form.html:82
+msgid "Submit"
+msgstr "Submit"
+
+#: .\accounts\templates\accounts\contact.html:80
+msgid "get in <span>touch</span>"
+msgstr "get in <span>touch</span>"
+
+#: .\accounts\templates\accounts\contact.html:93 .\templates\footer.html:102
+msgid ""
+"Thiangourou, Rue longeant la clôture de l'autogare centrale Albarika, 200m à "
+"droite après la place IDI"
+msgstr ""
+"Thiangourou, Street along the fence of the Albarika central bus station, "
+"200m on the right after the IDI square"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:13
+msgid "Member Detail"
+msgstr "Member Detail"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:14
+msgid ""
+"Visitez le profil de nos spécialistes, prenez contact avec eux et discutez "
+"de votre rétablissement"
+msgstr ""
+"Visit our specialists' profiles, get in touch with them and discuss your "
+"recovery"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:29
+msgid "meet <span>specialist</span>"
+msgstr "meet <span>specialist</span>"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:47
+msgid "Speciality"
+msgstr "Speciality"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:48
+msgid "Degrees"
+msgstr "Degrees"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:49
+#: .\accounts\templates\accounts\patients_profiles.html:49
+msgid "Experience"
+msgstr "Experience"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:50
+#: .\accounts\templates\accounts\patients_profiles.html:50
+msgid "Training"
+msgstr "Training"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:51
+#: .\accounts\templates\accounts\patients_profiles.html:51
+msgid "Work days"
+msgstr "Work days"
+
+#: .\accounts\templates\accounts\doctors_profiles.html:52
+#: .\accounts\templates\accounts\patients_profiles.html:52
+msgid "SEND MESSAGE"
+msgstr "SEND MESSAGE"
+
+#: .\accounts\templates\accounts\index.html:26
+msgid "Bienvenue dans votre clinique <span>Le Medium</span>."
+msgstr "Welcome to your clinic <span>The Medium</span>."
+
+#: .\accounts\templates\accounts\index.html:33
+msgid "Des <span>Personnels</span> de"
+msgstr "<span>Qualified</span> Care "
+
+#: .\accounts\templates\accounts\index.html:34
+msgid "Soins <span>Qualifiés</span>."
+msgstr "<span>Personnel</span>."
+
+#: .\accounts\templates\accounts\index.html:42
+msgid "Un environnement <span>saint</span> adéquat"
+msgstr "A <span>holy</span> environment suitable "
+
+#: .\accounts\templates\accounts\index.html:43
+msgid "pour une <span>guérion</span> rapide"
+msgstr "for rapid <span>healing</span>"
+
+#: .\accounts\templates\accounts\index.html:50
+msgid "Un <span>acceuil</span> chaleureux vous attend"
+msgstr "A warm <span>welcome</span> awaits you."
+
+#: .\accounts\templates\accounts\index.html:74
+msgid "Emergency Case"
+msgstr "Emergency Case"
+
+#: .\accounts\templates\accounts\index.html:75
+msgid ""
+"Dans les cas d'urgence, nous sommes la meilleure clinique qui répond aussi "
+"rapidement que possible. Contactez-nous et testez notre fiabilité"
+msgstr ""
+"In emergency cases, we are the best clinic that responds as quickly as "
+"possible. Contact us and test our reliability."
+
+#: .\accounts\templates\accounts\index.html:76
+msgid "Contacte"
+msgstr "Contacte"
+
+#: .\accounts\templates\accounts\index.html:86
+msgid "Opening Hours"
+msgstr "Opening Hours"
+
+#: .\accounts\templates\accounts\index.html:87
+msgid "Nous sommes ouvert et disponible pour prendre soin de votre santé."
+msgstr "We are open and available to take care of your health."
+
+#: .\accounts\templates\accounts\index.html:92
+msgid "Monday - Friday"
+msgstr "Monday - Friday"
+
+#: .\accounts\templates\accounts\index.html:95
+#: .\accounts\templates\accounts\index.html:103
+#: .\accounts\templates\accounts\index.html:111
+msgid "8.00 - 16.00"
+msgstr "8.00 - 16.00"
+
+#: .\accounts\templates\accounts\index.html:100
+#: .\accounts\templates\accounts\index.html:108
+msgid "Saturday"
+msgstr "Saturday"
+
+#: .\accounts\templates\accounts\index.html:124
+msgid "Cancer Care"
+msgstr "Cancer Care"
+
+#: .\accounts\templates\accounts\index.html:125
+msgid ""
+"Le centre de santé LE MEDIUM est doté de spécialiste dans chaque domaine de "
+"la santé. En cas de maladie grave et incurable, les outils nécessaires sont "
+"à notre disposition."
+msgstr ""
+"The LE MEDIUM health center is staffed by specialists in each area of "
+"health. In the event of a serious and incurable illness, the necessary tools "
+"are at our disposal."
+
+#: .\accounts\templates\accounts\index.html:189
+msgid "A propos de Nous"
+msgstr "About Us"
+
+#: .\accounts\templates\accounts\index.html:190
+msgid "Nous sommes le leader des centres de santé."
+msgstr "We are the leader in health centers."
+
+#: .\accounts\templates\accounts\index.html:196
+msgid "AWARD SHOWS"
+msgstr "AWARD SHOWS"
+
+#: .\accounts\templates\accounts\index.html:202
+msgid "our staff"
+msgstr "our staff"
+
+#: .\accounts\templates\accounts\index.html:208
+msgid "clinic rooms"
+msgstr "clinic rooms"
+
+#: .\accounts\templates\accounts\index.html:214
+msgid "machines"
+msgstr "machines"
+
+#: .\accounts\templates\accounts\index.html:231
+msgid "Our"
+msgstr "Our"
+
+#: .\accounts\templates\accounts\index.html:231
+msgid "Team"
+msgstr "Team"
+
+#: .\accounts\templates\accounts\index.html:244
+msgid "View Profile"
+msgstr "Patient Profile"
+
+#: .\accounts\templates\accounts\index.html:266
+msgid "Latest <span>News</span> "
+msgstr "Latest <span>News</span>"
+
+#: .\accounts\templates\accounts\index.html:274
+msgid "FEB 2024"
+msgstr "FEB 2024"
+
+#: .\accounts\templates\accounts\index.html:277
+msgid "De nouveaux apareils microscopique"
+msgstr "New microscopic devices"
+
+#: .\accounts\templates\accounts\index.html:278
+#: .\accounts\templates\accounts\index.html:290
+#: .\accounts\templates\accounts\index.html:305
+#: .\accounts\templates\accounts\index.html:317
+msgid "By"
+msgstr "By"
+
+#: .\accounts\templates\accounts\index.html:278
+#: .\accounts\templates\accounts\index.html:290
+#: .\accounts\templates\accounts\index.html:305
+#: .\accounts\templates\accounts\index.html:317
+msgid "admin"
+msgstr "admin"
+
+#: .\accounts\templates\accounts\index.html:278
+#: .\accounts\templates\accounts\index.html:290
+#: .\accounts\templates\accounts\index.html:305
+#: .\accounts\templates\accounts\index.html:317
+msgid "Tags"
+msgstr "Tags"
+
+#: .\accounts\templates\accounts\index.html:278
+msgid "Microscop"
+msgstr "Microscope"
+
+#: .\accounts\templates\accounts\index.html:278
+msgid "Analyses"
+msgstr "Analyses"
+
+#: .\accounts\templates\accounts\index.html:278
+msgid "Dapartement"
+msgstr "Dapartement"
+
+#: .\accounts\templates\accounts\index.html:279
+msgid ""
+"Vous êtes inquièt de votre santé, vous voulez savoir plus sur l'état de "
+"votre sang, nous sommes la meilleure clinique qui analyse et satisfait ses "
+"patients en une courte durée"
+msgstr ""
+"You are worried about your health, you want to know more about the condition "
+"of your blood, we are the best clinic that analyzes and satisfies its "
+"patients in a short time"
+
+#: .\accounts\templates\accounts\index.html:280
+#: .\accounts\templates\accounts\index.html:292
+#: .\accounts\templates\accounts\index.html:307
+#: .\accounts\templates\accounts\index.html:319
+msgid "Contactez-nous"
+msgstr "Contact Us"
+
+#: .\accounts\templates\accounts\index.html:289
+msgid "Appareil pour les analyses biochiques"
+msgstr "Device for biochemical analyzes"
+
+#: .\accounts\templates\accounts\index.html:290
+#: .\accounts\templates\accounts\index.html:317
+msgid "Analyse"
+msgstr "Analyse"
+
+#: .\accounts\templates\accounts\index.html:290
+msgid "Opération"
+msgstr "Operation"
+
+#: .\accounts\templates\accounts\index.html:290
+#: .\accounts\templates\accounts\index.html:317
+msgid "Santé"
+msgstr "Health"
+
+#: .\accounts\templates\accounts\index.html:291
+msgid ""
+"Nous sommes équipés de grands docteurs dans le domaine. Leur expérience pour "
+"leur capacité à répondre aux attentes des patients. "
+msgstr ""
+"We are equipped with great doctors in the field. Their experience for their "
+"ability to meet patient expectations."
+
+#: .\accounts\templates\accounts\index.html:304
+msgid "Salle de soins"
+msgstr "Treatment room"
+
+#: .\accounts\templates\accounts\index.html:305
+msgid "Graphic"
+msgstr "Analysis"
+
+#: .\accounts\templates\accounts\index.html:305
+msgid "illustration"
+msgstr "Services"
+
+#: .\accounts\templates\accounts\index.html:305
+msgid "Logo"
+msgstr "Blood"
+
+#: .\accounts\templates\accounts\index.html:306
+msgid ""
+"Les mesures sont prises pour votre guérison rapide. Vous êtes logé dans de "
+"bonnes conditions pendant votre séjour dans la Clinique Le Medium"
+msgstr ""
+"Steps are being taken for your speedy recovery. You are accommodated in good "
+"conditions during your stay in the Clinique Le Medium"
+
+#: .\accounts\templates\accounts\index.html:316
+msgid "Salle d'opérations"
+msgstr "Operating room"
+
+#: .\accounts\templates\accounts\index.html:317
+msgid "Accouchement"
+msgstr "Childbirth"
+
+#: .\accounts\templates\accounts\index.html:318
+msgid ""
+"Du moment où vous entrez en travail, nos spécialistes vous assistent jusqu'à "
+"l'accouchement. Nous prenons soin de vous les premiers instants."
+msgstr ""
+"From the moment you go into labor, our specialists assist you until "
+"delivery. We take care of you from the first moments."
+
+#: .\accounts\templates\accounts\index.html:333
+msgid "Meet the <span>doctors"
+msgstr "Meet the <span>doctors"
+
+#: .\accounts\templates\accounts\index.html:348
+msgid "medicom <span>tour</span>"
+msgstr "medicom <span>tour</span>"
+
+#: .\accounts\templates\accounts\index.html:354
+#: .\accounts\templates\accounts\index.html:381
+#: .\accounts\templates\accounts\index.html:407
+msgid "Outpatient Rehabilitation"
+msgstr "Outpatient Rehabilitation"
+
+#: .\accounts\templates\accounts\index.html:360
+#: .\accounts\templates\accounts\index.html:373
+#: .\accounts\templates\accounts\index.html:386
+#: .\accounts\templates\accounts\index.html:399
+#: .\accounts\templates\accounts\index.html:412
+#: .\accounts\templates\accounts\index.html:425
+#: .\accounts\templates\accounts\index.html:438
+msgid ""
+"It has survived not only five centuries, but also the leap into electronic "
+"typesetting, remaining essentially unchanged. It was popularised in the "
+"1960s with the release of Letraset sheets containing Lorem Aldus Page Maker "
+"including versions."
+msgstr ""
+"It has survived not only five centuries, but also the leap into electronic "
+"typesetting, remaining essentially unchanged. It was popularised in the "
+"1960s with the release of Letraset sheets containing Lorem Aldus Page Maker "
+"including versions."
+
+#: .\accounts\templates\accounts\index.html:368
+msgid "Dental Instruments"
+msgstr "Dental Instruments"
+
+#: .\accounts\templates\accounts\index.html:394
+msgid "Outpatient Surgery"
+msgstr "Outpatient Surgery"
+
+#: .\accounts\templates\accounts\index.html:420
+msgid "Heart Clinic"
+msgstr "Heart Clinic"
+
+#: .\accounts\templates\accounts\index.html:433
+msgid "Weight Loss"
+msgstr "Weight Loss"
+
+#: .\accounts\templates\accounts\index.html:465
+msgid "medicom App Available"
+msgstr "medicom App Available"
+
+#: .\accounts\templates\accounts\index.html:466
+msgid "Notre appication bientôt disponible au grand publique"
+msgstr "Our application soon available to the general public"
+
+#: .\accounts\templates\accounts\index.html:467
+msgid "AVAILABLE ON STORES"
+msgstr "AVAILABLE ON STORES"
+
+#: .\accounts\templates\accounts\index.html:495
+#: .\accounts\templates\accounts\index.html:504
+#: .\accounts\templates\accounts\index.html:513
+msgid "What Our patients Say About Us"
+msgstr "What Our patients Say About Us"
+
+#: .\accounts\templates\accounts\index.html:496
+msgid "Testinonie1"
+msgstr "Testinonie1"
+
+#: .\accounts\templates\accounts\index.html:499
+#: .\accounts\templates\accounts\index.html:508
+#: .\accounts\templates\accounts\index.html:517
+msgid "fred albert<span>Heart patient</span>"
+msgstr "fred albert<span>Heart patient</span>"
+
+#: .\accounts\templates\accounts\index.html:505
+msgid "Testinonie2"
+msgstr "Testinonie2"
+
+#: .\accounts\templates\accounts\index.html:514
+msgid "Testinonie3."
+msgstr "Testinonie3"
+
+#: .\accounts\templates\accounts\login_form.html:25
+msgid "Please <span>Log in</span>"
+msgstr "Please <span>Log in</span>"
+
+#: .\accounts\templates\accounts\login_form.html:40
+msgid "Enter your username.."
+msgstr "Enter your username.."
+
+#: .\accounts\templates\accounts\login_form.html:52
+msgid "Log In"
+msgstr "Log In"
+
+#: .\accounts\templates\accounts\login_form.html:58
+msgid "Forget Password?"
+msgstr "Forget Password?"
+
+#: .\accounts\templates\accounts\login_form.html:61
+msgid "Don’t have an Account?"
+msgstr "Don’t have an Account?"
+
+#: .\accounts\templates\accounts\login_form.html:62
+msgid "Sign Up"
+msgstr "Sign Up"
+
+#: .\accounts\templates\accounts\patient_account.html:19
+msgid "Compte du patient"
+msgstr "Patient account"
+
+#: .\accounts\templates\accounts\patient_account.html:20
+msgid ""
+"Personnalisez votre compte. Donnez tous les détails pour un contact rapide"
+msgstr "Personalize your account. Give all the details for a quick contact"
+
+#: .\accounts\templates\accounts\patient_account.html:40
+#: .\accounts\templates\accounts\patient_profile.html:40
+msgid "Your <span>Account</span>"
+msgstr "Your <span>Account</span>"
+
+#: .\accounts\templates\accounts\patient_account.html:62
+msgid "Email"
+msgstr "Email"
+
+#: .\accounts\templates\accounts\patient_account.html:63
+#: .\accounts\templates\accounts\patient_profile.html:53
+msgid "Adress"
+msgstr "Adress"
+
+#: .\accounts\templates\accounts\patient_account.html:64
+#: .\accounts\templates\accounts\patient_profile.html:54
+msgid "Date of birth"
+msgstr "Date of birth"
+
+#: .\accounts\templates\accounts\patient_account.html:77
+#: .\accounts\templates\accounts\patient_profile.html:67
+#: .\appointment\templates\appointment\appointments.html:39
+msgid "Your <span>Appointments</span>"
+msgstr "Your <span>Appointments</span>"
+
+#: .\accounts\templates\accounts\patient_account.html:94
+#: .\accounts\templates\accounts\patient_profile.html:83
+msgid "Date of appointment"
+msgstr "Date of appointment"
+
+#: .\accounts\templates\accounts\patient_account.html:95
+#: .\accounts\templates\accounts\patient_profile.html:84
+msgid "Message"
+msgstr "Message"
+
+#: .\accounts\templates\accounts\patient_profile.html:19
+msgid "Profil du patient"
+msgstr "Patient profile"
+
+#: .\accounts\templates\accounts\patient_profile_form.html:18
+msgid "Personnalisez votre profil"
+msgstr "Personalize your profile"
+
+#: .\accounts\templates\accounts\patient_profile_form.html:41
+msgid "Edit Account"
+msgstr "Edit Account"
+
+#: .\accounts\templates\accounts\patient_profile_form.html:87
+#: .\accounts\templates\accounts\signup_form.html:82
+msgid "I'am doctor"
+msgstr "I'am doctor"
+
+#: .\accounts\templates\accounts\patients_profiles.html:13
+msgid "Les patients"
+msgstr "Patients"
+
+#: .\accounts\templates\accounts\patients_profiles.html:29
+msgid "Tous les <span>patients</span>"
+msgstr "All <span>patients</span>"
+
+#: .\accounts\templates\accounts\patients_profiles.html:47
+msgid "email"
+msgstr "email"
+
+#: .\accounts\templates\accounts\signup_form.html:18
+msgid "S'enrégistrer"
+msgstr "S'enrégistrer"
+
+#: .\accounts\templates\accounts\skill_form.html:16
+msgid "Edite Skill"
+msgstr "Edite Skill"
+
+#: .\accounts\views\cmedium.py:41
+msgid "Username does not exist"
+msgstr "Username does not exist"
+
+#: .\accounts\views\cmedium.py:56
+msgid "You have logged out"
+msgstr "You have logged out"
+
+#: .\appointment\models.py:14
+msgid "first_name"
+msgstr "First name"
+
+#: .\appointment\models.py:15
+msgid "last_name"
+msgstr "Last name"
+
+#: .\appointment\models.py:18
+msgid "image_appointment"
+msgstr "Image appointment"
+
+#: .\appointment\models.py:21
+msgid "date_of_appointment"
+msgstr "Date of appointment"
+
+#: .\appointment\models.py:22
+msgid "phone_number"
+msgstr "Phone number"
+
+#: .\appointment\models.py:23
+msgid "gender"
+msgstr "Gender"
+
+#: .\appointment\models.py:24
+msgid "Male"
+msgstr "Male"
+
+#: .\appointment\models.py:24
+msgid "Female"
+msgstr "Female"
+
+#: .\appointment\models.py:24
+msgid "Child"
+msgstr "Child"
+
+#: .\appointment\models.py:24
+msgid "Other"
+msgstr "Other"
+
+#: .\appointment\templates\appointment\appointment_form.html:16
+msgid "Personnalisez votre Rendez-vous"
+msgstr "Personalize your appointment"
+
+#: .\appointment\templates\appointment\appointment_form.html:37
+msgid "Make an appointment"
+msgstr "Appointment"
+
+#: .\mediumcenter\settings.py:122
+msgid "English"
+msgstr "English"
+
+#: .\mediumcenter\settings.py:123
+msgid "Français"
+msgstr "French"
+
+#: .\templates\footer.html:20 .\templates\navbar.html:42
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\footer.html:21
+msgid "Doctors"
+msgstr "Doctor"
+
+#: .\templates\footer.html:22
+msgid "About US"
+msgstr "About Us"
+
+#: .\templates\footer.html:23
+msgid "Departments"
+msgstr "Departments"
+
+#: .\templates\footer.html:24
+msgid "Services"
+msgstr "Services"
+
+#: .\templates\footer.html:27
+msgid "Medical Care"
+msgstr "Medical Care"
+
+#: .\templates\footer.html:28
+msgid "Specilaties"
+msgstr "Specilaties"
+
+#: .\templates\footer.html:30 .\templates\navbar.html:96
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: .\templates\footer.html:48
+msgid "Sign up with your name and email to get updates fresh updates."
+msgstr "Sign up with your name and email to get updates fresh updates."
+
+#: .\templates\footer.html:50
+msgid "Thank you! You have successfully subscribed."
+msgstr "Thank you! You have successfully subscribed."
+
+#: .\templates\footer.html:68
+msgid "Récentes pubs"
+msgstr "Recent ads"
+
+#: .\templates\footer.html:74 .\templates\footer.html:81
+msgid "Please kindly use our Support Forum"
+msgstr "Please kindly use our Support Forum"
+
+#: .\templates\footer.html:75 .\templates\footer.html:82
+msgid "about a month ago"
+msgstr "about a month ago"
+
+#: .\templates\footer.html:98
+msgid "Contact"
+msgstr "Contact"
+
+#: .\templates\footer.html:99
+msgid "Prenez connaissance de notre localisation et nos contacts"
+msgstr "Find out about our location and our contacts"
+
+#: .\templates\footer.html:127
+msgid ""
+"Copyright &copy; 2024 Clinique Médicale le Médium. Tous droits réservés."
+msgstr "Copyright &copy; 2024 Medical clinic Le Médium. All rights reserved."
+
+#: .\templates\footer.html:136
+msgid "Texte de pieds de page"
+msgstr ""
+"We are a large, very attractive medical clinic\n"
+"and very dynamic. Our projects to be at the bedside of populations "
+"concerning\n"
+"their health concerns are enormous."
+
+#: .\templates\main.html:4
+msgid "dir"
+msgstr "ltr"
+
+#: .\templates\navbar.html:49
+msgid "Prestations"
+msgstr "Services"
+
+#: .\templates\navbar.html:53
+msgid "Service de Médecine générale"
+msgstr "General Medicine Department"
+
+#: .\templates\navbar.html:54
+msgid "petite et moyenne chirurgie"
+msgstr "small and medium surgery"
+
+#: .\templates\navbar.html:55
+msgid "tous les actes infirmiers"
+msgstr "all nursing actions"
+
+#: .\templates\navbar.html:56
+msgid "médicaux"
+msgstr "medical"
+
+#: .\templates\navbar.html:60
+msgid "Services spécialisés"
+msgstr "Specialized services"
+
+#: .\templates\navbar.html:61
+msgid "Consultation et prise en charge en cardiologie"
+msgstr "Cardiology consultation and care"
+
+#: .\templates\navbar.html:62
+msgid "Consultation et prise en charge en gynécologie"
+msgstr "Consultation and care in gynecology"
+
+#: .\templates\navbar.html:63
+msgid "Consultation et prise en charge en pédiatrie"
+msgstr "Pediatric consultation and care"
+
+#: .\templates\navbar.html:67
+msgid "Laboratoire de pointe"
+msgstr "State-of-the-art laboratory"
+
+#: .\templates\navbar.html:68
+msgid "GE-DP"
+msgstr "GE-DP"
+
+#: .\templates\navbar.html:69
+msgid "NFS"
+msgstr "NFS"
+
+#: .\templates\navbar.html:70
+msgid "Electrophorèse de l’hémoglobine"
+msgstr "Hemoglobin electrophoresis"
+
+#: .\templates\navbar.html:71
+msgid "SDW"
+msgstr "SDW"
+
+#: .\templates\navbar.html:72
+msgid "Sérologie HIV"
+msgstr "HIV serology"
+
+#: .\templates\navbar.html:79
+msgid "Gestion Patient"
+msgstr "Patient Management"
+
+#: .\templates\navbar.html:81
+msgid "Consultation"
+msgstr "Consultation"
+
+#: .\templates\navbar.html:82 .\templates\navbar.html:118
+msgid "Make an Appointment"
+msgstr "Appointment"
+
+#: .\templates\navbar.html:83
+msgid "Suivi Patients &amp; Families"
+msgstr "Patient Monitoring &amp; families"
+
+#: .\templates\navbar.html:84
+msgid "Memmber Detail"
+msgstr "Member Detail"
+
+#: .\templates\navbar.html:93 .\templates\navbar.html:95
+msgid "About Us"
+msgstr "About Us"
+
+#: .\templates\navbar.html:108
+msgid "My Account"
+msgstr "My Account"
+
+#: .\templates\navbar.html:127 .\templates\navbar.html:142
+msgid "Patient"
+msgstr "Patient"
+
+#: .\templates\navbar.html:131 .\templates\navbar.html:146
+msgid "Appointment"
+msgstr "Appointment"
+
+#: .\templates\navbar.html:138
+msgid "Doctor"
+msgstr "Doctor"
+
+#: .\templates\navbar.html:154
+msgid "Logout"
+msgstr "Logout"
+
+#: .\templates\navbar.html:163
+msgid "Se connecter"
+msgstr "Login"
+
+#~ msgid "Invalid username or password"
+#~ msgstr "Invalid username or password"
+
+#~ msgid "About Us One"
+#~ msgstr "About Us One"
+
+#~ msgid "About Us Two"
+#~ msgstr "About Us Two"
+
+#~ msgid "Arm Lift Department"
+#~ msgstr "Arm Lift Department"
+
+#~ msgid "Examens biologiques"
+#~ msgstr "Biological examinations"
+
+#~ msgid "Examents d'imagerie"
+#~ msgstr "Imaging tests"
+
+#~ msgid "Rhinoplasty Department"
+#~ msgstr "Rhinoplasty Department"
+
+#~ msgid "Latest"
+#~ msgstr "Latest"
+
+#~ msgid "News"
+#~ msgstr "News"
+
+#~ msgid "Le Medium"
+#~ msgstr "Le Medium"
+
+#~ msgid "created"
+#~ msgstr "created"
+
+#~ msgid "Doctor_Profile"
+#~ msgstr "Doctor Profile"
+
+#~ msgid "Doctors_Profiles"
+#~ msgstr "Doctors Profiles"
+
+#~ msgid "Patients_Profiles"
+#~ msgstr "Patients Profiles"

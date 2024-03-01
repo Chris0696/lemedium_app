@@ -1,0 +1,562 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+<!-- Main Banner
+			============================================= -->
+
+{% block mainbanner %}
+
+<div id="main-banner" class="owl-carousel main-banner clearfix">
+
+				<div class="item">
+					<img src="{% static 'images/banner-img.jpg' %}" alt="" title="">
+					<div class="slider-caption">
+						<!---<p>better <span>technology</span> for</p><br/>
+						<p>better <span>healthcare</span></p>-->
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="{% static 'images/banner-img3.jpg' %}" alt="" title="">
+					<div class="slider-caption">
+						<!---<p>better <span>technology</span> for</p>--><br/>
+						<p>{% trans "Bienvenue dans votre clinique <span>Le Medium</span>." %}</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="{% static 'images/banner-img2.jpg' %}" alt="" title="">
+					<div class="slider-caption">
+						<p>{% trans "Des <span>Personnels</span> de" %}</p><br/>
+						<p>{% trans "Soins <span>Qualifiés</span>." %}</p>
+					</div>
+				</div>
+
+
+				<div class="item">
+					<img src="{% static 'images/banner-img4.jpg' %}" alt="" title="">
+					<div class="slider-caption">
+						<p>{% trans "Un environnement <span>saint</span> adéquat" %}</p><br/>
+						<p>{% trans "pour une <span>guérion</span> rapide" %}</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="{% static 'images/banner-img5.jpg' %}" alt="" title="">
+					<div class="slider-caption">
+						<p>{% trans "Un <span>acceuil</span> chaleureux vous attend" %}</p>
+						<!---<p>pour une <span>guérion</span>rapide</p>--->
+					</div>
+				</div>
+
+			</div>
+
+{% endblock mainbanner %}
+
+{% block content %}
+
+
+
+<div id="content-index">
+
+
+<!-- Home Boxes
+============================================= -->
+<div class="row text-center no-margin">
+
+	<div class="col-md-4 bg-default">
+
+		<div class="home-box">
+			<span class="glyphicon glyphicon-tint"></span>
+			<h3>{% trans "Emergency Case" %}</h3>
+			<p>{% trans "Dans les cas d'urgence, nous sommes la meilleure clinique qui répond aussi rapidement que possible. Contactez-nous et testez notre fiabilité" %}</p>
+			<a href="#." class="btn-rounded btn-bordered">{% trans "Contacte" %}</a>
+		</div>
+
+	</div>
+
+	<div class="col-md-4">
+
+		<div class="home-box opening-hours clearfix">
+
+			<span class="glyphicon glyphicon-time"></span>
+			<h3>{% trans "Opening Hours" %}</h3>
+			<p>{% trans "Nous sommes ouvert et disponible pour prendre soin de votre santé." %}</p>
+
+			<ul class="list-unstyled">
+				<li class="clearfix">
+				<span>
+					{% trans "Monday - Friday" %}
+				</span>
+				<div class="value">
+					{% trans "8.00 - 16.00" %}
+				</div>
+				</li>
+				<li class="clearfix">
+				<span>
+					{% trans "Saturday" %}
+				</span>
+				<div class="value">
+					{% trans "8.00 - 16.00" %}
+				</div>
+				</li>
+				<li class="clearfix">
+				<span>
+					{% trans "Saturday" %}
+				</span>
+				<div class="value">
+					{% trans "8.00 - 16.00" %}
+				</div>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="col-md-4 bg-default">
+
+		<div class="home-box">
+			<span class="glyphicon glyphicon-tint"></span>
+			<h3>{% trans "Cancer Care" %}</h3>
+			<p>{% trans "Le centre de santé LE MEDIUM est doté de spécialiste dans chaque domaine de la santé. En cas de maladie grave et incurable, les outils nécessaires sont à notre disposition." %}</p>
+			<a href="#." class="btn-rounded btn-bordered">Read more</a>
+		</div>
+
+	</div>
+
+</div>
+
+
+<!-- Creative Section
+		============================================= -->
+<!--
+		<section class="creative-sec">
+
+			<div class="container">
+
+				<div class="text-center">
+					<h1 class="light">Why Medicom is so Awesome?</h1>
+					<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec</p>
+				</div>
+
+			   <div class="creative-sec-thumb one">
+					<figure>
+						<span class="overlay"><a href="medical-department.html"><i class="fa fa-eye"></i></a></span>
+						<img src="images/creative-sec-img1.jpg" width="154" class="img-circle img-thumbnail img-responsive" alt="" title="">
+						<figcaption>Outpatient Surgery</figcaption>
+					</figure>
+				</div>
+
+				<div class="creative-sec-thumb two">
+					<figure>
+						<span class="overlay"><a href="medical-department.html"><i class="fa fa-eye"></i></a></span>
+						<img src="images/patient-and-family-img1.jpg" width="266" class="img-circle img-thumbnail img-responsive" alt="" title="">
+						<figcaption>Pediatric Clinic</figcaption>
+					</figure>
+				</div>
+
+				<div class="creative-sec-thumb three">
+					<figure>
+						<span class="overlay"><a href="medical-department.html"><i class="fa fa-eye"></i></a></span>
+						<img src="images/creative-sec-img3.png" width="162" class="img-circle img-thumbnail img-responsive" alt="" title="">
+						<figcaption>Primery Health Care</figcaption>
+					</figure>
+				</div>
+
+				<div class="creative-sec-thumb four">
+					<figure>
+						<span class="overlay"><a href="medical-department.html"><i class="fa fa-eye"></i></a></span>
+						<img src="images/creative-sec-img4.jpg" width="305" class="img-circle img-thumbnail img-responsive" alt="" title="">
+						<figcaption>Cardiac Clinic</figcaption>
+					</figure>
+				</div>
+
+			</div>
+
+		</section>
+
+-->
+
+<!-- About
+============================================= -->
+<section class="about-sec text-center" data-stellar-background-ratio="0.3">
+
+	<div class="container">
+		<h1>{% trans "A propos de Nous" %}</h1>
+		<p class="lead">{% trans "Nous sommes le leader des centres de santé." %}</p>
+
+		<div class="row text-center" id="counters">
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter1 highlight">0</span>
+				   <h6 class="counter-details">{% trans "AWARD SHOWS" %}</h6>
+				 </div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter2 highlight">0</span>
+				   <h6 class="counter-details">{% trans "our staff" %}</h6>
+				 </div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter3 highlight">0</span>
+				   <h6 class="counter-details">{% trans "clinic rooms" %}</h6>
+				 </div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter4 highlight">0</span>
+				   <h6 class="counter-details">{% trans "machines" %}</h6>
+				 </div>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<!-- Team
+============================================= -->
+<section class="meet-the-doctors no-bg-img team-carousel">
+
+	<div class="container">
+
+		<h2 class="light bordered">{% trans "Our" %} <span>{% trans "Team" %}</span></h2>
+
+		<div id="team-carousel" class="owl-carousel wrapper-padding-none">
+			{% for profile in profiles %}
+			<div class="team-member">
+				<div class="team-thumb">
+					<img src="{{ profile.profile_image.url }}" class="img-rounded" alt="">
+					<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+					<a href="#."><i class="fa fa-twitter"></i></a>
+					<a href="#."><i class="fa fa-google-plus"></i></a></div>
+				</div>
+				<h5><a href="#.">{{ profile.name }}</a><br><span>{{ profile.short_intro }}</span></h5>
+				<p>{{ profile.training }}</p>
+				<a href="{% url 'accounts:doctors-profiles' %}"><em>- {% trans "View Profile" %}</em></a>
+			</div>
+			{% endfor %}
+
+		 </div>
+
+	</div>
+
+</section>
+
+
+
+<!-- Latest News
+============================================= -->
+<section class="latest-news">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<h2 class="bordered light">{% trans "Latest <span>News</span> " %}</h2>
+
+				<div class="row">
+
+					<div class="col-md-5">
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="{% static 'images/latest-news1.jpg' %}">
+							<div class="blog-date"><p class="day">03</p><p class="monthyear">{% trans "FEB 2024" %}</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">{% trans 'De nouveaux apareils microscopique' %}</a></h4>
+							<p class="blog-meta">{% trans 'By' %}: <a href="#">{% trans 'admin' %}</a> | {% trans 'Tags' %}: <a href="#">{% trans 'Microscop' %}</a>, <a href="#">{% trans 'Analyses' %}</a>, <a href="#">{% trans 'Dapartement' %}</a></p>
+							<p>{% trans "Vous êtes inquièt de votre santé, vous voulez savoir plus sur l'état de votre sang, nous sommes la meilleure clinique qui analyse et satisfait ses patients en une courte durée" %}.</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">{% trans 'Contactez-nous' %}</a>
+							</div>
+						</article>
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="{% static 'images/latest-news3.jpg' %}">
+							<div class="blog-date"><p class="day">12</p><p class="monthyear">FEB 2024</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">{% trans 'Appareil pour les analyses biochiques' %}</a></h4>
+							<p class="blog-meta">{% trans 'By' %}: <a href="#">{% trans 'admin' %}</a> | {% trans 'Tags' %}: <a href="#">{% trans 'Analyse' %}</a>, <a href="#">{% trans 'Opération' %}</a>, <a href="#">{% trans 'Santé' %}</a></p>
+							<p>{% trans "Nous sommes équipés de grands docteurs dans le domaine. Leur expérience pour leur capacité à répondre aux attentes des patients. " %}</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">{% trans 'Contactez-nous' %}</a>
+							</div>
+						</article>
+					</div>
+
+					<div class="col-md-7">
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="{% static 'images/latest-news2.jpg' %}">
+							<div class="blog-date"><p class="day">15</p><p class="monthyear">FEB 2024</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">{% trans 'Salle de soins' %}</a></h4>
+							<p class="blog-meta">{% trans 'By' %}: <a href="#">{% trans 'admin' %}</a> | {% trans 'Tags' %}: <a href="#">{% trans 'Graphic' %}</a>, <a href="#">{% trans 'illustration' %}</a>, <a href="#">{% trans 'Logo' %}</a></p>
+							<p>{% trans "Les mesures sont prises pour votre guérison rapide. Vous êtes logé dans de bonnes conditions pendant votre séjour dans la Clinique Le Medium" %}</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">{% trans 'Contactez-nous' %}</a>
+							</div>
+						</article>
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="{% static 'images/latest-news4.jpg' %}">
+							<div class="blog-date"><p class="day">17</p><p class="monthyear">FEB 2024</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">{% trans "Salle d'opérations" %}</a></h4>
+							<p class="blog-meta">{% trans 'By' %}: <a href="#">{% trans 'admin' %}</a> | {% trans 'Tags' %}: <a href="#">{% trans 'Accouchement' %}</a>, <a href="#">{% trans 'Santé' %}</a>, <a href="#">{% trans 'Analyse' %}</a></p>
+							<p>{% trans "Du moment où vous entrez en travail, nos spécialistes vous assistent jusqu'à l'accouchement. Nous prenons soin de vous les premiers instants." %}</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">{% trans 'Contactez-nous' %}</a>
+							</div>
+						</article>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- Sidebar
+			============================================= -->
+			<aside class="col-md-4">
+
+				<h2 class="bordered light">{% trans 'Meet the <span>doctors' %}</span></h2>
+					<div class="what-doctor-say clearfix">
+						<div id="meet-doctors-carousel" class="owl-carousel meet-doctors-carousel text-center">
+							{% for profile in profiles %}
+							<div class="item">
+							  <img src="{{ profile.profile_image.url }}" class="img-circle img-thumbnail list-inline" alt="" title="">
+								<h4>{{ profile.name }}<br/><span>{{ profile.speciality }}</span></h4>
+								<p>{{ profile.training }}</p>
+							</div>
+							{% endfor %}
+
+						</div>
+
+
+					</div>
+					<h2 class="bordered light">{% trans "medicom <span>tour</span>" %}</h2>
+					<div class="panel-group" id="accordion">
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title active">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							  <span><i class="fa fa-plus fa-minus"></i></span>{% trans "Outpatient Rehabilitation" %}
+							</a>
+						  </h4>
+						</div>
+
+						<div id="collapseOne" class="panel-collapse collapse in">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							  <span><i class="fa fa-plus"></i></span>{% trans "Dental Instruments" %}
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+							  <span><i class="fa fa-plus"></i></span>{% trans "Outpatient Rehabilitation" %}
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+							  <span><i class="fa fa-plus"></i></span>{% trans "Outpatient Surgery" %}
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+						  <div class="panel panel-default">
+							<div class="panel-heading">
+							  <h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+								  <span><i class="fa fa-plus"></i></span>{% trans "Outpatient Rehabilitation" %}
+								</a>
+							  </h4>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+							  <span><i class="fa fa-plus"></i></span>{% trans "Heart Clinic" %}
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseSix" class="panel-collapse collapse">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+							  <span><i class="fa fa-plus"></i></span>{% trans "Weight Loss" %}
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseSeven" class="panel-collapse collapse">
+						  <div class="panel-body">{% trans "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus Page Maker including versions." %}
+						  </div>
+						</div>
+					  </div>
+
+					</div>
+
+			</aside>
+
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<!-- App Store
+============================================= -->
+<section class="medicom-app" data-stellar-background-ratio="0.3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<img src="{% static 'images/mobile-hand.png' %}" class="app-img" alt="" title="">
+			</div>
+			<div class="col-md-7">
+				<div class="medicom-app-content">
+					<h1>{% trans "medicom App Available" %}</h1>
+					<p class="lead">{% trans "Notre appication bientôt disponible au grand publique" %}
+					<span>{% trans "AVAILABLE ON STORES" %}</span>
+					</p>
+					<ul class="list-unstyled app-buttons">
+						<li><a href="#."><img src="{% static 'images/app-store-btn.png' %}" alt="" title="App Store"></a></li>
+						<li><a href="#."><img src="{% static 'images/google-play-btn.png' %}" alt="" title="Google App"></a></li>
+					</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- Testimonials
+============================================= -->
+<section class="testimonials bg-white text-center">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<div id="carousel-testimonials" class="owl-carousel slide testimonials-carousel">
+
+					<div class="item">
+					  <h1>{% trans "What Our patients Say About Us" %}</h1>
+					  <p>{% trans "Testinonie1" %}</p>
+						<div class="testimonials-patient-detail">
+							<img src="{% static 'images/patient-img.png' %}" class="img-circle img-thumbnail" alt="" title="">
+							<p>{% trans "fred albert<span>Heart patient</span>" %}</p>
+						</div>
+					</div>
+
+					<div class="item">
+					  <h1>{% trans "What Our patients Say About Us" %}</h1>
+					  <p>{% trans "Testinonie2" %}</p>
+						<div class="testimonials-patient-detail">
+							<img src="{% static 'images/patient-img.png' %}" class="img-circle img-thumbnail" alt="" title="">
+							<p>{% trans "fred albert<span>Heart patient</span>" %}</p>
+						</div>
+					</div>
+
+					<div class="item">
+					  <h1>{% trans "What Our patients Say About Us" %}</h1>
+					  <p>{% trans "Testinonie3." %}</p>
+						<div class="testimonials-patient-detail">
+							<img src="{% static 'images/patient-img.png' %}" class="img-circle img-thumbnail" alt="" title="">
+							<p>{% trans "fred albert<span>Heart patient</span>" %}</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+</div><!--end #content-index-->
+
+
+<div class="colourfull-row"></div>
+
+
+{% endblock content %}
+
+<!-- This page
+============================================= -->
+<script src="{% static 'js/jquery.themepunch.plugins.min.js' %}"></script>
+<script src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<script>
+
+	(function () {
+
+		// Revolution slider
+		var revapi;
+		revapi = jQuery('.tp-banner').revolution(
+		{
+			delay:9000,
+			startwidth:1170,
+			startheight:682,
+			hideThumbs:200,
+			fullWidth:"on",
+			forceFullWidth:"on"
+		});
+
+	})();
+
+</script>

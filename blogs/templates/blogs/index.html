@@ -1,0 +1,588 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div id="content-index">
+
+
+<!-- Home Boxes
+============================================= -->
+<div class="row text-center no-margin">
+
+	<div class="col-md-4 bg-default">
+
+		<div class="home-box">
+			<span class="glyphicon glyphicon-tint"></span>
+			<h3>Emergency Case</h3>
+			<p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros s adipiscing elit. Ut volutpat eros sit.</p>
+			<a href="#." class="btn-rounded btn-bordered">Read more</a>
+		</div>
+
+	</div>
+
+	<div class="col-md-4">
+
+		<div class="home-box opening-hours clearfix">
+
+			<span class="glyphicon glyphicon-time"></span>
+			<h3>Opening Hours</h3>
+			<p>If you need a doctor for to the consectetuer
+ consectetur adipiscing Graphic Design is elit.</p>
+
+			<ul class="list-unstyled">
+				<li class="clearfix">
+				<span>
+					Monday - Friday
+				</span>
+				<div class="value">
+					8.00 - 16.00
+				</div>
+				</li>
+				<li class="clearfix">
+				<span>
+					Saturday
+				</span>
+				<div class="value">
+					9.30 - 15.30
+				</div>
+				</li>
+				<li class="clearfix">
+				<span>
+					Sunday
+				</span>
+				<div class="value">
+					9.30 - 17.00
+				</div>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="col-md-4 bg-default">
+
+		<div class="home-box">
+			<span class="glyphicon glyphicon-tint"></span>
+			<h3>Cancer Care</h3>
+			<p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros s adipiscing elit. Ut volutpat eros sit.</p>
+			<a href="#." class="btn-rounded btn-bordered">Read more</a>
+		</div>
+
+	</div>
+
+</div>
+
+
+<!-- Appointment
+============================================= -->
+<section class="appointment-sec text-center">
+
+	<div class="container">
+
+		<h1>Make an appointment</h1>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+		<div class="row">
+
+			<div class="col-md-6">
+				<figure><img src="images/appointment-img.jpg" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
+			</div>
+
+			<div class="col-md-6">
+				<div class="appointment-form clearfix">
+				   <div class="success" id="message-app" style="display:none;"></div>
+					<form name="appoint_form" id="appoint_form" method="post" action="submit.php" onSubmit="return false">
+						<input type="text" name="app_fname" id="app_fname" placeholder="First Name" onKeyPress="removeChecks();">
+						<input type="text" name="app_lname" id="app_lname" placeholder="Last Name" onKeyPress="removeChecks();">
+						<input type="email" name="app_email_address" id="app_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
+						<input type="text" name="app_phone" id="app_phone" placeholder="Phone No">
+						<input type="text" name="datepicker" id="datepicker" placeholder="Appointment Date" onClick="removeChecks();">
+						<select name="gender" id="gender">
+							<option>Male</option>
+							<option>Female</option>
+							<option>Child</option>
+						</select>
+						<textarea placeholder="Message" name="app_msg" id="app_msg"></textarea>
+						<input type="submit" value="submit" class="btn btn-default btn-rounded" onClick="validateAppoint();">
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<!-- About
+============================================= -->
+<section class="about-sec text-center" data-stellar-background-ratio="0.3">
+
+	<div class="container">
+		<h1>about Medicom</h1>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+		<div class="row text-center" id="counters">
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter1 highlight">0</span>
+				   <h6 class="counter-details">AWARD SHOWS</h6>
+				 </div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter2 highlight">0</span>
+				   <h6 class="counter-details">our staff</h6>
+				 </div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter3 highlight">0</span>
+				   <h6 class="counter-details">clinic rooms</h6>
+				 </div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="counter">
+				   <span class="quantity-counter4 highlight">0</span>
+				   <h6 class="counter-details">machines</h6>
+				 </div>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<!-- Team
+============================================= -->
+<section class="meet-the-doctors no-bg-img team-carousel">
+
+	<div class="container">
+
+		<h2 class="light bordered">Our <span>Team</span></h2>
+
+		<div id="team-carousel" class="owl-carousel wrapper-padding-none">
+
+			{% for profile in profiles %}
+			<div class="team-member">
+				<div class="team-thumb">
+					<img src="{{ profile.profile_image.url }}" class="img-rounded" alt="">
+					<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
+					<a href="#."><i class="fa fa-twitter"></i></a>
+					<a href="#."><i class="fa fa-google-plus"></i></a></div>
+				</div>
+				<h5><a href="#.">{{ profile.name }}</a><br><span>{{ profile.short_intro }}</span></h5>
+				<p>{{ profile.training }}</p>
+				<a href="{% url 'accounts:doctors-profiles' %}"><em>- View Profile</em></a>
+			</div>
+			{% endfor %}
+
+
+		 </div>
+
+	</div>
+
+</section>
+
+
+
+<!-- Latest News
+============================================= -->
+<section class="latest-news">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<h2 class="bordered light">Latest <span>News</span></h2>
+
+				<div class="row">
+
+					<div class="col-md-5">
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="images/latest-news1.jpg">
+							<div class="blog-date"><p class="day">29</p><p class="monthyear">FEB 2014</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
+							<p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
+							<p>Printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever scrambled...</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
+							</div>
+						</article>
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="images/latest-news3.jpg">
+							<div class="blog-date"><p class="day">29</p><p class="monthyear">FEB 2014</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
+							<p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
+							<p>Printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever scrambled...</p>
+							<p>Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor [...]</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
+							</div>
+						</article>
+					</div>
+
+					<div class="col-md-7">
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="images/latest-news2.jpg">
+							<div class="blog-date"><p class="day">29</p><p class="monthyear">FEB 2014</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
+							<p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
+							<p>Printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever scrambled...</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
+							</div>
+						</article>
+						<article class="blog-item">
+							<div class="blog-thumbnail">
+							<img alt="" src="images/latest-news4.jpg">
+							<div class="blog-date"><p class="day">29</p><p class="monthyear">FEB 2014</p></div>
+							</div>
+							<div class="blog-content">
+							<h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
+							<p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
+							<p>Printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever scrambled...</p>
+							<a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
+							</div>
+						</article>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- Sidebar
+			============================================= -->
+			<aside class="col-md-4">
+
+				<h2 class="bordered light">Meet the <span>doctors</span></h2>
+					<div class="what-doctor-say clearfix">
+						<div id="meet-doctors-carousel" class="owl-carousel meet-doctors-carousel text-center">
+							<div class="item">
+							  <img src="images/doctor-img.png" class="img-circle img-thumbnail list-inline" alt="" title="">
+								<h4>Dr.Mark Leon<br /><span>Anesthesiologist</span></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo.
+	ornare, augue ut ultricies tristique, </p>
+							</div>
+							<div class="item">
+							  <img src="images/doctor-img.png" class="img-circle img-thumbnail" alt="" title="">
+								<h4>Dr.Mark Leon<br /><span>Anesthesiologist</span></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo.
+	ornare, augue ut ultricies tristique, </p>
+							</div>
+							<div class="item">
+							  <img src="images/doctor-img.png" class="img-circle img-thumbnail" alt="" title="">
+								<h4>Dr.Mark Leon<br /><span>Anesthesiologist</span></h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo.
+	ornare, augue ut ultricies tristique, </p>
+							</div>
+						</div>
+
+
+					</div>
+					<h2 class="bordered light">medicom <span>tour</span></h2>
+					<div class="panel-group" id="accordion">
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title active">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							  <span><i class="fa fa-plus fa-minus"></i></span>Outpatient Rehabilitation
+							</a>
+						  </h4>
+						</div>
+
+						<div id="collapseOne" class="panel-collapse collapse in">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							  <span><i class="fa fa-plus"></i></span>Dental Instruments
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+						  <div class="panel-body">
+						   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+							  <span><i class="fa fa-plus"></i></span>Outpatient Rehabilitation
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+							  <span><i class="fa fa-plus"></i></span>Outpatient Surgery
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+							  <span><i class="fa fa-plus"></i></span>Outpatient Rehabilitation
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseFive" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+							  <span><i class="fa fa-plus"></i></span>Heart Clinic
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseSix" class="panel-collapse collapse">
+						  <div class="panel-body">
+						   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+							  <span><i class="fa fa-plus"></i></span>Weight Loss
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseSeven" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+							  <span><i class="fa fa-plus"></i></span>Rehabilitation Center
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseEight" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+							  <span><i class="fa fa-plus"></i></span>Outpatient Rehabilitation
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseNine" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
+							  <span><i class="fa fa-plus"></i></span>Surgery & Transplants
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseTen" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
+							  <span><i class="fa fa-plus"></i></span>Medical Counseling
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseEleven" class="panel-collapse collapse">
+						  <div class="panel-body">
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
+	Page Maker including versions.
+						  </div>
+						</div>
+					  </div>
+					</div>
+
+			</aside>
+
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<!-- App Store
+============================================= -->
+<section class="medicom-app" data-stellar-background-ratio="0.3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<img src="images/mobile-hand.png" class="app-img" alt="" title="">
+			</div>
+			<div class="col-md-7">
+				<div class="medicom-app-content">
+					<h1>medicom App Available</h1>
+					<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					<span>AVAILABLE ON STORES</span>
+					</p>
+					<ul class="list-unstyled app-buttons">
+						<li><a href="#."><img src="images/app-store-btn.png" alt="" title="App Store"></a></li>
+						<li><a href="#."><img src="images/google-play-btn.png" alt="" title="Google App"></a></li>
+					</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- Testimonials
+============================================= -->
+<section class="testimonials bg-white text-center">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<div id="carousel-testimonials" class="owl-carousel slide testimonials-carousel">
+
+					<div class="item">
+					  <h1>What Our patients Say About Us</h1>
+					  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec, placerat turpis. Aenean eu gravida arcu, et consectetur
+orci Quisque posuere dolor in malesuada fermentum.</p>
+						<div class="testimonials-patient-detail">
+							<img src="images/patient-img.png" class="img-circle img-thumbnail" alt="" title="">
+							<p>fred albert<span>Heart patient</span></p>
+						</div>
+					</div>
+
+					<div class="item">
+					  <h1>What Our patients Say About Us</h1>
+					  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec, placerat turpis. Aenean eu gravida arcu, et consectetur
+orci Quisque posuere dolor in malesuada fermentum.</p>
+						<div class="testimonials-patient-detail">
+							<img src="images/patient-img.png" class="img-circle img-thumbnail" alt="" title="">
+							<p>fred albert<span>Heart patient</span></p>
+						</div>
+					</div>
+
+					<div class="item">
+					  <h1>What Our patients Say About Us</h1>
+					  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec, placerat turpis. Aenean eu gravida arcu, et consectetur
+orci Quisque posuere dolor in malesuada fermentum.</p>
+						<div class="testimonials-patient-detail">
+							<img src="images/patient-img.png" class="img-circle img-thumbnail" alt="" title="">
+							<p>fred albert<span>Heart patient</span></p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+</div><!--end #content-index-->
+
+
+<div class="colourfull-row"></div>
+
+
+{% endblock content %}
+
+<!-- This page
+============================================= -->
+<script src="{% static 'js/jquery.themepunch.plugins.min.js' %}"></script>
+<script src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<script>
+
+	(function () {
+
+		// Revolution slider
+		var revapi;
+		revapi = jQuery('.tp-banner').revolution(
+		{
+			delay:9000,
+			startwidth:1170,
+			startheight:682,
+			hideThumbs:200,
+			fullWidth:"on",
+			forceFullWidth:"on"
+		});
+
+	})();
+
+</script>

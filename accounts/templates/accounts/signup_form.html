@@ -1,0 +1,96 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+<!-- Sub Page Banner
+============================================= -->
+
+{% block subanner %}
+
+			<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+
+				<div class="overlay"></div>
+
+				<div class="container">
+
+
+					<h1 class="entry-title">{% trans "S'enrégistrer" %}</h1>
+
+				</div>
+
+			</section>
+
+{% endblock subanner %}
+
+
+{% block content %}
+
+
+
+<!-- Sub Page Content
+			============================================= -->
+			<div id="sub-page-content" class="clearfix no-padding">
+
+				<!-- Appointment
+				============================================= -->
+				<section class="appointment-sec text-center">
+
+					<div class="container">
+
+						<h1>{% trans "Account SignUp"}</h1>
+						<p class="lead">{% tans "Sign up as a" %} {{ user_type }}</p>
+
+						<div class="row">
+
+							<div class="col-md-6">
+								<figure><img src="{% static 'images/appointment-img.jpg' %}" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
+							</div>
+
+							<div class="col-md-6">
+								<div class="appointment-form clearfix">
+								   <div class="success" id="message-app" style="display:none;"></div>
+									<form name="appoint_form" id="appoint_form" action="" method="POST">
+										{% csrf_token %}
+
+										<div class="form-group col-md-8 mb-0">
+											{{ form.username|as_crispy_field }}
+										</div>
+
+										<div class="form-group col-md-8 mb-0">
+											{{ form.first_name|as_crispy_field }}
+										</div>
+
+										<div class="form-group col-md-8 mb-0">
+											{{ form.email|as_crispy_field }}
+										</div>
+
+										<div class="form-group col-md-6 mb-0">
+											{{ form.password1|as_crispy_field }}
+										</div>
+
+										<div class="form-group col-md-6 mb-0">
+											{{ form.password2|as_crispy_field }}
+										</div>
+
+
+
+										<input type="submit" value="Sign  In" class="btn btn-default btn-rounded">
+
+										<div class="form-group col-md-6 mb-0">
+										{% if user_type == 'patient' %}
+											<a  class="btn btn--sub" href="{% url 'doctor_register' %}">{% trans "I'am doctor" %}</a>
+											{% endif %}
+										</div>
+
+									</form>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+</div>
+{% endblock content %}

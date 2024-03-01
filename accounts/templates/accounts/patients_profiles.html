@@ -1,0 +1,76 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<!-- Sub Page Banner
+============================================= -->
+<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1 class="entry-title">{% trans "Les patients" %}</h1>
+
+    </div>
+
+</section>
+
+
+
+<!-- Sub Page Content
+============================================= -->
+<div id="sub-page-content" class="clearfix">
+
+    <section class="team-description">
+
+        <div class="container">
+
+            <h2 class="light bordered">{% trans "Tous les <span>patients</span>" %}</h2>
+
+
+            <ul id="meet-specialist-carousel" class="list-unstyled owl-carousel row">
+                {% for profile in profiles %}
+
+                <li>
+
+                        <div class="doctors-img"><img src="{{ profile.profile_image.url }}" width="531" alt="" title="">
+                            <ul class="list-unstyled social2">
+                                <li><a href="#." class="fb"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="doctors-detail">
+                            <h4>{{ profile.user }}<span>{{ profile.short_intro }}</span></h4>
+                            <p><label class="heading">{% trans "email" %}</label><label class="detail">{{ profile.email }}</label></p>
+                            <p><label class="heading">{% trans "adress" %}</label><label class="detail">{{ profile.adress }}</label></p>
+                            <p><label class="heading">{% trans "Experience" %}</label><label class="detail">{{ profile.experience }}</label></p>
+                            <p><label class="heading">{% trans "Training" %}</label><label class="detail">{{ profile.training }}</label></p>
+                            <p><label class="heading">{% trans "Work days" %}</label><label class="detail">{{ profile.work_days }}</label></p>
+                            <button style="margin-top: 10px" type="button" class="btn btn-primary">{% trans "SEND MESSAGE" %}</button>
+                        </div>
+
+                </li>
+                {% endfor %}
+
+
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+
+
+</div><!--end sub-page-content-->
+
+
+
+<div class="colourfull-row"></div>
+
+
+{% endblock content %}

@@ -1,0 +1,193 @@
+{% load static %}
+{% load i18n %}
+
+
+<!-- Header
+============================================= -->
+<header id="header" class="medicom-header">
+
+	<!-- Top Row
+	============================================= -->
+	<div class="colourfull-row"></div>
+
+	<div class="container">
+
+
+		<!-- Primary Navigation
+		============================================= -->
+		<nav class="navbar navbar-default" role="navigation">
+
+			<!-- Brand and toggle get grouped for better mobile display
+			============================================= -->
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-nav">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="{% url 'blogs:index' %}"><img src="{% static 'images/logo_le_medium80.png' %}" alt="" title=""></a>
+
+			</div>
+
+
+			<div class="collapse navbar-collapse navbar-right" id="primary-nav">
+
+				<ul class="nav navbar-nav">
+
+					<li class="dropdown active">
+						<a href="{% url 'accounts:index' %}">{% trans "Home" %}</a>
+					</li>
+
+
+
+
+					<li class="mega-menu-item dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Prestations" %}</a>
+						<div class="mega-menu dropdown-menu">
+							<img src="images/mega-menu-img.jpg" class="img-rounded" alt="" title="">
+							<ul>
+								<li><strong>{% trans "Service de Médecine générale" %}</strong></li>
+								<li><a href="medical-department.html">{% trans "petite et moyenne chirurgie" %}</a></li>
+								<li><a href="medical-department.html">{% trans "tous les actes infirmiers" %}</a></li>
+								<li><a href="medical-department.html">{% trans "médicaux" %}</a></li>
+
+							</ul>
+							<ul>
+								<li><strong>{% trans "Services spécialisés" %}</strong></li>
+								<li><a href="medical-department.html">{% trans "Consultation et prise en charge en cardiologie" %}</a></li>
+								<li><a href="medical-department.html">{% trans "Consultation et prise en charge en gynécologie" %}</a></li>
+								<li><a href="medical-department.html">{% trans "Consultation et prise en charge en pédiatrie" %}</a></li>
+
+							</ul>
+							<ul>
+								<li><strong>{% trans "Laboratoire de pointe" %}</strong></li>
+								<li><a href="medical-department.html">{% trans "GE-DP" %}</a></li>
+								<li><a href="medical-department.html">{% trans "NFS" %}</a></li>
+								<li><a href="medical-department.html">{% trans "Electrophorèse de l’hémoglobine" %}</a></li>
+								<li><a href="medical-department.html">{% trans "SDW" %}</a></li>
+								<li><a href="medical-department.html">{% trans "Sérologie HIV" %}</a></li>
+
+							</ul>
+						</div>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Gestion Patient" %}</a>
+						<ul class="dropdown-menu">
+							<li><a href="services.html">{% trans "Consultation" %}</a></li>
+							<li><a href="{% url 'appointment:make-appointment' %}">{% trans "Make an Appointment" %}</a></li>
+							<li><a href="patient-and-families.html">{% trans "Suivi Patients &amp; Families" %}</a></li>
+							<li><a href="{% url 'accounts:doctors-profiles' %}">{% trans "Memmber Detail" %}</a></li>
+
+
+						</ul>
+					</li>
+
+
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "About Us" %}</a>
+						<ul class="dropdown-menu">
+						  <li><a href="{% url 'accounts:about' %}">{% trans "About Us" %}</a></li>
+						  <li><a href="{% url 'accounts:contact' %}">{% trans "Contact Us" %}</a></li>
+						</ul>
+					</li>
+
+
+
+
+					 {% if request.user.is_authenticated %}
+
+						<li class="header__menuItem dropdown">
+
+							<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								{% trans "My Account" %}
+							</button>
+							<ul class="dropdown-menu">
+							{% if user.is_authenticated and user.is_patient %}
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'patient-account' %}"><h6>{{ user.username }}</h6></a>
+
+									<li><div class="dropdown-divider"></div></li>
+
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'appointment:make-appointment' %}"><h6>{% trans 'Make an Appointment' %}</h6></a>
+									</li>
+
+							{% elif user.is_authenticated and user.is_doctor %}
+
+
+									<li><div class="dropdown-divider"></div></li>
+
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'accounts:patients-profiles' %}"><h6>{% trans 'Patient' %}</h6></a>
+									</li>
+
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'appointment:appointments' %}"><h6>{% trans 'Appointment' %}</h6></a>
+									</li>
+
+
+							{% else %}
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'accounts:doctors-profiles' %}"><h6>
+											{% trans "Doctor" %}</h6></a>
+									</li>
+
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'accounts:patients-profiles' %}"><h6>{% trans 'Patient' %}</h6></a>
+									</li>
+
+									<li>
+										<a class="dropdown-item text-center" href="{% url 'appointment:appointments' %}"><h6>{% trans 'Appointment' %}</h6></a>
+									</li>
+							{% endif %}
+
+
+									<li><div class="dropdown-divider"></div></li>
+
+									<li>
+										<a class="dropdown-item active text-center" href="{% url 'accounts:logout' %}"><strong><h5>{% trans 'Logout' %}</h5></strong></a>
+									</li>
+
+							</ul>
+						</li>
+
+
+					  {% else %}
+
+					  <li class="header__menuItem"><a href="{% url 'accounts:login' %}" class="btn btn--sub">{% trans 'Se connecter' %}</a></li>
+
+					  {% endif %}
+
+					<li class="dropdown me-auto active">
+						{% get_current_language as CURRENT_LANGUAGE %}
+						{% get_available_languages as AVAILABLE_LANGUAGES %}
+						{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue</a>
+						<ul class="dropdown-menu">
+							{% for language in languages %}
+								<li>
+									<a class="dropdown-item {% if language.code == CURRENT_LANGUAGE %}active{% endif %}" href="{% if language.code == 'fr' %}/{% else %}/{{ language.code }}/{% endif %}">{{ language.name_local }}</a>
+								</li>
+                   			 {% endfor %}
+
+
+						</ul>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+	</div>
+
+	<div class="header-bottom-line"></div>
+
+</header>

@@ -1,0 +1,82 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+<!-- Sub Page Banner
+============================================= -->
+
+{% block subanner %}
+
+			<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+
+				<div class="overlay"></div>
+
+				<div class="container">
+
+
+					<h1 class="entry-title">{% tans "Appointments" %}</h1>
+
+				</div>
+
+			</section>
+
+{% endblock subanner %}
+
+{% block content %}
+			<!-- Sub Page Content
+			============================================= -->
+			<div id="sub-page-content" class="clearfix no-padding">
+
+
+				<!-- Appointment
+				============================================= -->
+				<section class="team-description">
+
+					<div class="container">
+
+						<h2 class="light bordered">{% trans "Your <span>Appointments</span>" %}</h2>
+
+
+						<ul id="meet-specialist-carousel" class="list-unstyled owl-carousel row">
+						{% for appointment in appments %}
+							<li>
+
+								<div class="doctors-img">
+									<a href=""></a>
+									<img src="{{ appointment.image_appointment.url }}" width="531" alt="" title="">
+
+								</div>
+
+								<div class="doctors-detail">
+									<h4>{{ appointment.patient }}<span></span></h4>
+									<p><label class="heading">{trans "Patient" %}</label><label class="detail">{{ appointment.patient }}</label></p>
+									<p><label class="heading">{trans "Date of appointment" %}</label><label class="detail">{{ appointment.date_of_appointment }}</label></p>
+									<p><label class="heading">Message</label><label class="detail">{{ appointment.message }}</label></p>
+
+								</div>
+
+							</li>
+
+
+							{% endfor %}
+
+
+
+						</ul>
+
+					</div>
+
+				</section>
+
+
+
+
+
+			</div>
+
+			<div class="colourfull-row"></div>
+
+
+{% endblock content %}

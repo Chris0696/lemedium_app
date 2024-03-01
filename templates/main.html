@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en" dir="{% trans 'dir' %}" class="no-js">
+  <head>
+    <base href="" />
+	<!-- Basic Page Needs
+
+     ================================================== -->
+
+	 <meta charset="utf-8">
+
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	 <link rel="icon" type="image/png" href="images/favicon.png">
+
+     <title>CM MEDIUM</title>
+
+     <meta name="description" content="">
+
+     <meta name="keywords" content="">
+
+     <meta name="author" content="">
+
+
+	 <!-- Mobile Specific Metas
+
+     ================================================== -->
+
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+     <meta name="format-detection" content="telephone=no">
+
+
+	 <!-- Web Font
+	 ============================================= -->
+	 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+
+	<!-- CSS
+
+     ================================================== -->
+
+
+	<!-- Theme Color
+	============================================= -->
+	<link rel="stylesheet" id="color" href="{% static 'styles/blue.css' %}">
+
+
+	<!-- Medicom Style
+	============================================= -->
+    <link rel="stylesheet" href="{% static 'styles/medicom.css' %}">
+
+
+	<!-- Bootstrap
+	============================================= -->
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+
+
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+
+	<!-- Header Scripts
+
+    ================================================== -->
+
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+
+
+
+  </head>
+
+    <body class="fixed-header">
+
+
+		<!-- Loader -->
+		<div id="preloader"></div>
+
+
+
+
+		<!-- Document Wrapper
+		============================================= -->
+		<div id="wrapper" class="clearfix">
+
+
+
+            {% include 'navbar.html' %}
+
+            <!-- Main Banner
+			============================================= -->
+
+            {% block mainbanner %}
+
+            {% endblock mainbanner %}
+
+            <!-- Sub Page Banner
+			============================================= -->
+
+            {% block subanner %}
+
+            {% endblock subanner %}
+
+
+            {% if messages %}
+
+            {% for message in messages %}
+            <div class="alert  alert--{{message.tags}}">
+                <p class="alert__message">{{message}}</p>
+                <button class="alert__close">x</button>
+            </div>
+
+            {% endfor %}
+
+            {% endif %}
+
+
+
+            {% block content %}
+
+            {% endblock content %}
+
+
+            {% include 'footer.html' %}
+
+
+                <!-- back to top -->
+                <a href="#." class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+            </div><!--end #wrapper-->
+
+            <!-- All Javascript
+            ============================================= -->
+            <script src="{% static 'js/jquery.js' %}"></script>
+            <script src="{% static 'js/bootstrap.min.js' %}"></script>
+            <script src="{% static 'js/jquery.stellar.js' %}"></script>
+            <script src="{% static 'js/jquery-ui-1.10.3.custom.js' %}"></script>
+            <script src="{% static 'js/owl.carousel.js' %}"></script>
+            <script src="{% static 'js/counter.js' %}"></script>
+            <script src="{% static 'js/waypoints.js' %}"></script>
+            <script src="{% static 'js/jquery.uniform.js' %}"></script>
+            <script src="{% static 'js/easyResponsiveTabs.js' %}"></script>
+            <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+            <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+            <script src="{% static 'js/jquery.mixitup.js' %}"></script>
+            <script src="{% static 'js/forms-validation.js' %}"></script>
+            <script src="{% static 'js/jquery.jcarousel.min.js' %}"></script>
+            <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+            <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>
